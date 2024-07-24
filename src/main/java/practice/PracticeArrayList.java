@@ -13,7 +13,7 @@ public class PracticeArrayList {
         colors.add("BLUE");
         colors.add(1,"Black");
 
-//        System.out.println(colors.get(3));
+        System.out.println(colors.get(3));
         System.out.println("Before"+colors);
 
 //        Update the array 3rd element with "Yellow"
@@ -30,9 +30,9 @@ public class PracticeArrayList {
             System.out.println("false");
         }
 
-//        for (String ele : colors) {
-//            System.out.println(ele);
-//        }
+        for (String ele : colors) {
+            System.out.println(ele);
+        }
         Collections.sort(colors);
         System.out.println(colors);
 
