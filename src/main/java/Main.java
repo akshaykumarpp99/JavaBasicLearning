@@ -1,4 +1,4 @@
-import practice.PrimeNumberOrNot;
+import practice.CountTheNumberOfCharInString;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +18,13 @@ public class Main {
 //        s1.swapTwoStrings("Akshay","yahskA");
 
 //        Verify whether it is prime number or not
-        PrimeNumberOrNot p = new PrimeNumberOrNot();
-        p.primeNumberOrNot(1);
+//        PrimeNumberOrNot p = new PrimeNumberOrNot();
+//        p.primeNumberOrNot(1);
+
+//        Count the number of characters in given String and repetations of chars in given string
+        CountTheNumberOfCharInString c = new CountTheNumberOfCharInString();
+//        c.countTheNumberOfCharInString("asdfghjkl");
+        c.numberOfSpecificChars("akshaya");
+
     }
 }
