@@ -1,0 +1,32 @@
+Difference between Collection and Collections:
+
+- In Java, Collection and Collections refer to two different concepts,
+each serving a distinct purpose within the Java Collections Framework.
+
+Collection Interface:
+
+- Collection is a root interface in the Java Collections Framework. It represents a group of objects known as elements.
+- It is a part of the java.util package.
+
+Subinterfaces:
+
+Several subinterfaces extend Collection, including:
+- List: An ordered collection that can contain duplicate elements (e.g., ArrayList, LinkedList).
+- Set: A collection that cannot contain duplicate elements (e.g., HashSet, TreeSet).
+- Queue: A collection designed for holding elements prior to processing (e.g., LinkedList, PriorityQueue).
+
+Collections Class:
+
+Utility Class:
+
+- Collections is a utility class in the Java Collections Framework, found in the java.util package.
+- It cannot be instantiated (it has a private constructor) and provides static methods to operate on or return collections.
+
+Purpose:
+
+The Collections class contains various static methods for:
+- Sorting (Collections.sort(List<T> list))
+- Searching (Collections.binarySearch(List<? extends Comparable<? super T>> list, T key))
+- Shuffling (Collections.shuffle(List<?> list))
+- Creating synchronized (thread-safe) versions of collections (Collections.synchronizedList(List<T> list))
+- Creating immutable collections (Collections.unmodifiableList(List<? extends T> list))
