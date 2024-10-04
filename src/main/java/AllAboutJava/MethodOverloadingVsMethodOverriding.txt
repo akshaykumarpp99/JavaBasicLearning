@@ -1,0 +1,57 @@
+Method Overloading
+
+Definition:
+Method overloading occurs when multiple methods in the same class (or in a subclass) have the same name but differ in parameter types,
+number of parameters, or both.
+
+Purpose:
+It allows a class to perform similar operations with different types or numbers of inputs, improving code readability and usability.
+
+Compile-Time Polymorphism:
+Overloading is resolved at compile time, which is why it is also referred to as compile-time polymorphism.
+
+Example:
+
+class MathOperations {
+    // Method to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method to add two double values
+    double add(double a, double b) {
+        return a + b;
+    }
+
+=========================================================
+
+Method Overriding
+
+Definition:
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+
+Purpose:
+It allows a subclass to provide a specific implementation for a method that is already defined in its parent class, facilitating dynamic method dispatch and polymorphism.
+
+Runtime Polymorphism:
+Overriding is resolved at runtime, which is why it is also referred to as runtime polymorphism.
+
+Example:
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}

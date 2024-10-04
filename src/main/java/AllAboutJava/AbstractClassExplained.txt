@@ -1,0 +1,71 @@
+Definition:
+
+- Abstraction is a fundamental concept of object-oriented programming
+hat focuses on hiding the implementation while exposing only the necessary parts.
+
+- These are classes that cannot be instantiated on their own and
+can include both abstract methods (without implementation) and concrete methods (with implementation).
+
+- Abstract classes are used when you want to provide a base class with some common functionality
+that derived classes can inherit or override.
+
+
+Interfaces:
+
+- An interface is a reference type in Java that can contain only constants, method signatures,
+default methods, static methods, and nested types.
+
+- Interfaces cannot contain instance fields. A class implements an interface, which allows for multiple inheritance of type.
+
+Abstract Classes
+
+Syntax:
+abstract class Animal {
+    abstract void makeSound(); // Abstract method
+    void eat() { // Concrete method
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+Key Points:
+An abstract class can have both abstract and non-abstract methods.
+It can also have fields and constructors.
+A subclass must provide implementations for all abstract methods unless it is also declared as abstract.
+
+Interfaces
+
+Syntax:
+interface Animal {
+
+    void makeSound(); // Abstract method
+
+    default void eat() { // Default method
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog implements Animal {
+
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+Key Points:
+All methods in an interface are implicitly public and abstract (except default and static methods).
+A class can implement multiple interfaces, enabling multiple inheritance.
+Interfaces can provide default method implementations, which allows for adding new methods to interfaces without breaking existing implementations.
+
+Practical Use Cases
+Framework Development: Abstraction is widely used in frameworks like Spring and Hibernate to allow users to interact with complex systems through simplified APIs.
+Polymorphism: By using abstract classes and interfaces, Java allows for dynamic method resolution, enabling polymorphic behavior.
+
+Conclusion
+Abstraction is a powerful feature in Java that enables developers to create more manageable, reusable, and modular code.
+Understanding how to effectively use abstract classes and interfaces is essential for building robust applications in Java.
