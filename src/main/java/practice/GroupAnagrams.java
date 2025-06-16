@@ -12,14 +12,22 @@ public class GroupAnagrams {
         }
     }
 
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public List<List<String>> groupAnagrams(String[] args){
+//        Store all results in map(String, list(string))
+//        loop the string array
+    //        convert all strings to char array
+    //        sort the array
+    //        convert to charArray into string and store it
+    //        store in map every new sorted chararray as key and a new arrayList as value
+    //        get the sorted chararray and add the string array as value.
+
         Map<String, List<String>> res = new HashMap<>();
-        for (String s : strs) {
-            char[] charArray = s.toCharArray();
-            Arrays.sort(charArray);
-            String sortedS = new String(charArray);
-            res.putIfAbsent(sortedS, new ArrayList<>());
-            res.get(sortedS).add(s);
+        for(String str: args){
+            char[] cArr = str.toCharArray();
+            Arrays.sort(cArr);
+            String sorted = new String(cArr);
+            res.putIfAbsent(sorted, new ArrayList<>());
+            res.get(sorted).add(str);
         }
         return new ArrayList<>(res.values());
     }
