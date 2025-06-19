@@ -10,9 +10,9 @@ public class kFrequentElements {
 //        Store the key as a number and value as number of repetations
 //        create List of int array
 //        using Map.Entry interface add the value and key into the List of int array
-//        Sort the List<int[]>
+//        Sort the List<int[]> to store the result
 //        Create another int[] var and
-//        Get the 2nd value of List<int[]> and store in var which is created just
+//        Get the 2nd value of List<int[]> and store in var which is created to store the result
 //        Extract the top k elements and log it
 
         int[] nums = {1,2,2,3,3,3};
