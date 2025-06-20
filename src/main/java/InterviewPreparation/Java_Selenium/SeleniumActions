@@ -1,0 +1,28 @@
+Basic Selenium Actions
+
+    *   click() – Click on an element
+    *   sendKeys() – Enter text in input fields
+    *   getText() – Get visible text
+    *   getAttribute() – Get attribute value (e.g., id, class)
+    *   clear() – Clear input fields
+
+Advanced User Interactions (Actions Class)
+
+-   To handle more complex interactions (mouse & keyboard):
+
+    *   moveToElement() – Move mouse to an element
+    *   clickAndHold() – Click and hold
+    *   doubleClick() – Double-click an element
+    *   contextClick() – Right-click on an element
+    *   dragAndDrop(source, target) – Drag and drop from source to target
+    *   sendKeys(Keys.ENTER) – Keyboard actions
+    *   release() – Release the mouse button
+    *   build()	- Builds the action sequence.
+    *   perform() - Performs the action sequence.
+
+
+    Example of Using Actions Class
+
+        WebElement element = driver.findElement(By.id("menu"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().perform();

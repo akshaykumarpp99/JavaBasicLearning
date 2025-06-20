@@ -1,0 +1,50 @@
+HTTP Error Codes:
+
+1xx: Informational Responses
+
+        Code	Description
+        100	    Continue – Client can continue the request.
+        101	    Switching Protocols – Server switching to a different protocol (e.g., WebSocket).
+        102	    Processing – Server received and is processing the request (WebDAV).
+
+2xx: Successful Responses
+
+        Code	Description
+        200	    OK – Standard success response.
+        201	    Created – Resource successfully created.
+        202	    Accepted – Request accepted for processing but not completed yet.
+        204	    No Content – Success, but no content in the response body.
+
+3xx: Redirection
+
+        Code	Description
+        301	    Moved Permanently – Resource has a new permanent URL.
+        302	    Found – Resource is temporarily available at a different URL.
+        303	    See Other – Redirect to another resource (GET request).
+        304	    Not Modified – Resource has not changed since last request (cache validation).
+        307	    Temporary Redirect – Resource temporarily moved to another URL (same HTTP method).
+        308	    Permanent Redirect – Resource permanently moved to another URL (same HTTP method).
+
+4xx: Client Errors
+
+        Code	Description
+        400	    Bad Request – Server couldn’t understand the request.
+        401	    Unauthorized – Authentication needed.
+        403	    Forbidden – Access denied, even if authenticated.
+        404	    Not Found – Resource not found.
+        405	    Method Not Allowed – HTTP method not allowed for the resource.
+        408	    Request Timeout – Server timed out waiting for the request.
+        409	    Conflict – Request conflict (like duplicate data).
+        410	    Gone – Resource no longer available and won’t come back.
+        415	    Unsupported Media Type – Server doesn’t support the media type of the request.
+        429	    Too Many Requests – Client sent too many requests in a short time (rate limiting).
+
+5xx: Server Errors
+
+        Code	Description
+        500	    Internal Server Error – Generic server-side error.
+        501	    Not Implemented – Server doesn’t recognize the method or lacks ability to fulfill it.
+        502	    Bad Gateway – Server acting as a gateway got an invalid response from upstream.
+        503	    Service Unavailable – Server temporarily overloaded or under maintenance.
+        504	    Gateway Timeout – Server acting as a gateway timed out while waiting for upstream.
+        505	    HTTP Version Not Supported – Server doesn’t support the HTTP version used.

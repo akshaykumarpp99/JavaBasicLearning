@@ -1,0 +1,55 @@
+Java Exceptions
+
+What: Errors that occur when your Java program runs.
+
+Types of Java Exceptions
+
+1️⃣ Checked Exceptions
+
+    Must be handled (try-catch or throws)
+
+    *   IOException – error in input/output
+    *   FileNotFoundException – file not found
+    *   SQLException – database error
+    *   ClassNotFoundException – class not found
+
+2️⃣ Unchecked Exceptions (Runtime Exceptions)
+
+    Occur at runtime
+
+    *   NullPointerException – accessing a null object
+    *   ArrayIndexOutOfBoundsException – wrong array index
+    *   ArithmeticException – divide by zero
+    *   NumberFormatException – string to number conversion error
+    *   IllegalArgumentException – invalid argument
+    *   IllegalStateException – method called at the wrong time
+    *   ClassCastException – invalid type casting
+
+====================================================================================================
+
+Selenium Exceptions
+
+What: Errors when automating a browser with Selenium.
+
+    *   NoSuchElementException – element not found
+    *   ElementNotVisibleException - Element is present in DOM but not visible.
+    *   ElementNotSelectableException - Element is present but can’t be selected.
+    *   StaleElementReferenceException - Element is no longer attached to the DOM.
+    *   NoSuchFrameException - Frame not found.
+    *   TimeoutException – wait times out
+    *   NoSuchWindowException - Window not found.
+    *   NoAlertPresentException - Alert not found.
+
+    Why: Often because of page load issues, missing elements, or dynamic pages.
+
+====================================================================================================
+
+Cucumber Exceptions
+
+What: Errors when using Cucumber for BDD testing.
+
+   Examples:
+   *    UndefinedStepException – step in feature file not defined
+   *    AmbiguousStepDefinitionsException – multiple matching step definitions
+
+   Why: Happens when steps are missing or duplicated in step definitions.

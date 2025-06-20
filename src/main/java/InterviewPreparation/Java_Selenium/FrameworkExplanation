@@ -1,0 +1,32 @@
+Java
+
+*   We use Java as our programming language and Selenium WebDriver for browser automation.
+====================================================================================================
+Maven
+
+*   A build tool that manages project dependencies (like Selenium, TestNG).
+*   It helps keep libraries up to date and makes the project easier to share.
+====================================================================================================
+ TestNG
+
+*   A testing framework for structuring tests, running them in parallel, and generating HTML reports.
+*   Helps us organize test cases into suites and groups.
+====================================================================================================
+Page Object Model (POM)
+
+*   Design pattern to organize your Selenium code.
+*   Each web page has a separate Java class (Page Object) containing locators and actions.
+====================================================================================================
+Feature Files (Cucumber)
+
+*   In BDD (Behavior Driven Development), feature files use Gherkin language to write test scenarios.
+====================================================================================================
+Step Definitions
+
+*   Java methods that link the steps in the feature files to Selenium code.
+====================================================================================================
+Properties File
+
+*   A .properties file stores configurations like URLs, browser type, username, etc.
+*   Easy to change settings without touching the code.
+====================================================================================================

@@ -1,0 +1,125 @@
+OOPs Concepts in Java
+
+Java is an object-oriented programming language. It follows four main OOPs concepts:
+====================================================================================================
+* Encapsulation
+
+  Wrapping up the web elements and actions in Page Object Model (POM) classes.
+
+  Example:
+
+  public class LoginPage {
+      private WebElement usernameField;
+      private WebElement passwordField;
+      private WebElement loginButton;
+
+      public void login(String user, String pass) {
+          usernameField.sendKeys(user);
+          passwordField.sendKeys(pass);
+          loginButton.click();
+      }
+  }
+====================================================================================================
+* Inheritance
+
+  Creating a Base Class for common setup and reusing it in other test classes.
+
+  Example:
+    public class BaseTest {
+        WebDriver driver;
+
+        public void setup() {
+            driver = new ChromeDriver();
+        }
+    }
+
+    public class LoginTest extends BaseTest {
+        @Test
+        public void testLogin() {
+            setup();
+            // perform login test
+        }
+    }
+====================================================================================================
+* Polymorphism
+
+    Using the same method name for different actions or test scenarios.
+
+    Method Overloading – Writing different login methods:(Compile time polymorphism)
+
+    Example:
+    void login(String user, String pass) {}
+    void login(String user, String pass, String otp) {}
+
+    Method Overriding – Implementing click actions differently in different browsers. (Run Time polymorphism)
+
+    Example:
+    class BrowserDriver {
+        void click(WebElement e) { e.click(); }
+    }
+    class MobileDriver extends BrowserDriver {
+        @Override
+        void click(WebElement e) { /* Mobile-specific tap implementation */ }
+    }
+====================================================================================================
+* Abstraction
+
+    Abstraction is the process of hiding complex details and exposing only the necessary parts to the outside world.
+
+    Hide Selenium commands (driver.findElement, click, etc.)
+    Provide a simplified interface for test scripts
+    Keep your test code clean and readable
+
+    Example:
+    public interface LoginActions {
+        void enterUsername(String user);
+        void enterPassword(String pass);
+        void clickLogin();
+    }
+====================================================================================================
+    Notes:
+    * Implementation with a Class
+
+            public class LoginPage implements LoginActions {
+                private WebDriver driver;
+
+                public LoginPage(WebDriver driver) {
+                    this.driver = driver;
+                }
+
+                @Override
+                public void enterUsername(String username) {
+                    driver.findElement(By.id("username")).sendKeys(username);
+                }
+
+                @Override
+                public void enterPassword(String password) {
+                    driver.findElement(By.id("password")).sendKeys(password);
+                }
+
+                @Override
+                public void clickLogin() {
+                    driver.findElement(By.id("login")).click();
+                }
+            }
+    * How Tests Use the Abstraction
+
+            public class LoginTest {
+                @Test
+                public void testValidLogin() {
+                    WebDriver driver = new ChromeDriver();
+                    LoginActions login = new LoginPage(driver); // Polymorphism in action!
+
+                    login.enterUsername("testUser");
+                    login.enterPassword("password123");
+                    login.clickLogin();
+                }
+            }
+====================================================================================================
+
+Why is This Helpful?
+✅ Test script (testValidLogin) is clean and focused only on what to do, not on Selenium details.
+✅ If the implementation changes (like locators change), you only update the LoginPage class, not the test code.
+✅ This makes your tests more maintainable and readable.
+
+
