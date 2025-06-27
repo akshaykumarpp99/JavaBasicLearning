@@ -1,13 +1,13 @@
 Definition:
 
 - Abstraction is a fundamental concept of object-oriented programming
-hat focuses on hiding the implementation while exposing only the necessary parts.
+that focuses on hiding the implementation while exposing only the necessary parts.
 
 - These are classes that cannot be instantiated on their own and
 can include both abstract methods (without implementation) and concrete methods (with implementation).
 
 - Abstract classes are used when you want to provide a base class with some common functionality
-that derived classes can inherit or override.
+and allow subclasses to provide specific implementations.
 
 
 Interfaces:
@@ -65,7 +65,3 @@ Interfaces can provide default method implementations, which allows for adding n
 Practical Use Cases
 Framework Development: Abstraction is widely used in frameworks like Spring and Hibernate to allow users to interact with complex systems through simplified APIs.
 Polymorphism: By using abstract classes and interfaces, Java allows for dynamic method resolution, enabling polymorphic behavior.
-
-Conclusion
-Abstraction is a powerful feature in Java that enables developers to create more manageable, reusable, and modular code.
-Understanding how to effectively use abstract classes and interfaces is essential for building robust applications in Java.

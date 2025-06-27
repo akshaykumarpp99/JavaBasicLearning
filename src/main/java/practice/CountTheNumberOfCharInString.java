@@ -11,6 +11,12 @@ public class CountTheNumberOfCharInString {
         System.out.println(l.length);
     }
 
+    public static void main(String[] args) {
+        CountTheNumberOfCharInString c = new CountTheNumberOfCharInString();
+//        c.countTheNumberOfCharInString("AKshay");
+        c.numberOfSpecificChars("Akshay KUmar");
+    }
+
     public void numberOfSpecificChars(String str){
         char[] l;
         l = str.toCharArray();
@@ -25,5 +31,4 @@ public class CountTheNumberOfCharInString {
         }
         System.out.println(h);
     }
-
 }

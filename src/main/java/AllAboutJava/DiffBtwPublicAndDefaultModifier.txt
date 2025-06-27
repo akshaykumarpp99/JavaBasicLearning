@@ -1,0 +1,15 @@
+Access Specifiers or Access modifers define the visibility or accessibility of the classes, methods and variables.
+
+Public Access Specifier:
+    * Visibility: Members (classes, methods and variables) declared as public are accessible from anywhere in the program.
+                    which includes other classes  within same package. classes from different packages.
+
+Default Access Specifier (Package-Private):
+    * Visibility: Members with default access are only accessible within the same package.
+                    They cannot be accessed from classes outside the package.
+
+
+Protected Access Specifier
+    * Visibility: Members marked as protected are accessible:
+                    - Within the same package, similar to default access.
+                    - In subclasses (even if those subclasses are in different packages).

@@ -16,4 +16,10 @@ public class PrimeNumberOrNot {
         }
 
     }
+    public static void main(String[] args) {
+        ////        Verify whether it is prime number or not
+        PrimeNumberOrNot p = new PrimeNumberOrNot();
+        p.primeNumberOrNot(3);
+
+    }
 }

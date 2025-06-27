@@ -12,4 +12,10 @@ public class Swap2Strings {
         System.out.println("S2 "+s2);
 
     }
+
+    public static void main(String[] args) {
+        ////       Swap 2 Strings
+        Swap2Strings s1 = new Swap2Strings();
+        s1.swapTwoStrings("Akshay","wifi");
+    }
 }

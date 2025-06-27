@@ -9,4 +9,9 @@ public class SumOfDigits {
         }
         System.out.println("sum of digist: "+store);
     }
+
+    public static void main(String[] args) {
+        SumOfDigits s = new SumOfDigits();
+        s.sumOfDigits(123);
+    }
 }

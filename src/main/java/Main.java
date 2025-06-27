@@ -1,4 +1,4 @@
-import practice.FindTheDuplicateCharsInString;
+import practice.ReverseAString;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,8 +27,16 @@ public class Main {
 //        c.numberOfSpecificChars("akshaya");
 
 //      Find the duplicate chars in the given string
-        FindTheDuplicateCharsInString f = new FindTheDuplicateCharsInString();
-        f.findTheDuplicateCharsInString("asdasdasdffffff");
+//        FindTheDuplicateCharsInString f = new FindTheDuplicateCharsInString();
+//        f.findTheDuplicateCharsInString("asdasdasdffffff");
 
+
+//        CollectionBasics.show();
+
+//        WordOccurance wo = new WordOccurance();
+//        wo.CountNumberofCharacterOccured("Akshay Auto Test machine Akshay Akshay Auto Test Test Test Test Test");
+
+        ReverseAString rs = new ReverseAString();
+        rs.reverseAString("Akshay Kumar ");
     }
 }
