@@ -38,5 +38,7 @@ public class Main {
 
         ReverseAString rs = new ReverseAString();
         rs.reverseAString("Akshay Kumar ");
+
+        System.out.println("New line");
     }
 }
